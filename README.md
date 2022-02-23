@@ -2,6 +2,6 @@ Example of Functional Architecture of the book "Unit Testing Principles, Practic
 
 Folders: src -> beforeFunctionalArch | afterFunctionalArch
 
-How to run:
-npm install
-npm test
+Steps to run: </br>
+1 - npm install </br> 
+2 - npm test </br> 

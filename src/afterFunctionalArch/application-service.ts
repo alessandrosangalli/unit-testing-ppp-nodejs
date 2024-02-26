@@ -13,6 +13,7 @@ export class ApplicationService {
     this._persister = new Persister();
   }
 
+  // Código trivial, sem estruturas de tomada de decisão -> não precisa de testes
   public async addRecord(visitorName: string, timeOfVisit: Date) {
     const files = await this._persister.readDirectory(this._directoryName);
     const update = await this._auditManager.addRecord(

@@ -13,6 +13,7 @@ export type FileContent = {
 export class AuditManager {
   constructor(private readonly _maxEntriesPerFile: number) {}
 
+  // Coração do negócio
   public async addRecord(
     files: FileContent[],
     visitorName: string,
@@ -30,6 +31,7 @@ export class AuditManager {
     const lastFile = files[files.length - 1];
     const numOfFiles = files.length;
 
+    // Poderiamos injetar o valor de lines para que esse método fosse puro
     const lines = (await fsPromises.readFile(lastFile.fileName))
       .toString()
       .split('\n');

@@ -8,7 +8,7 @@ jest.mock('fs/promises', () => ({
   readFile: jest.fn(),
 }));
 
-test('A new file is created for the first entry', async () => {
+test('Um novo arquivo é criado no primeiro registro', async () => {
   jest.spyOn(fsPromises, 'readdir').mockResolvedValueOnce([]);
   const writeFileSpy = jest.spyOn(fsPromises, 'writeFile');
 
@@ -25,7 +25,7 @@ test('A new file is created for the first entry', async () => {
   );
 });
 
-test('A new file is created when the current file overflows', async () => {
+test('Um novo arquivo é criado quando o arquivo atual excedo o limite', async () => {
   jest
     .spyOn(fsPromises, 'readdir')
     .mockResolvedValueOnce([

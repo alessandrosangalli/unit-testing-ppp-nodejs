@@ -10,7 +10,7 @@ jest.mock('fs/promises', () => ({
   ),
 }));
 
-test('A new file is created when the current file overflows', async () => {
+test('Um novo arquivo é criado quando o arquivo atual excedo o limite', async () => {
   const auditManager = new AuditManager(3);
   const files: FileContent[] = [
     {

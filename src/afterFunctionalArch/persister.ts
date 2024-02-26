@@ -2,7 +2,7 @@ import { FileContent, FileUpdate } from './audit-manager';
 import * as fsPromises from 'fs/promises';
 import * as path from 'path';
 
-// Camada mais externa com efeitos colaterais
+// Camada mais externa com efeitos colaterais -> podemos testar utilizando mocks caso necessário
 export class Persister {
   public async readDirectory(directoryName: string): Promise<FileContent[]> {
     const files = await fsPromises.readdir(directoryName);
